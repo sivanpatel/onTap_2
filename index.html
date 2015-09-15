@@ -9,8 +9,10 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/oauth-signature/dist/oauth-signature.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="secrets.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/onTapController.js"></script>
   </head>
 
@@ -27,19 +29,29 @@
        <form class="form-horizontal">
          <input type="text" class="inputBox" placeholder="Enter your location" ng-model="searchCtrl.searchTerm">
          </br>
-         <button class="btn searchButton" ng-click="searchCtrl.doSearch()" style="font-size: 40px;">Search</button>
+         <button class="btn searchButton" ng-click="searchCtrl.doSearch()" style="font-size: 20px;">Search</button>
        </form>
      </section>
      </div>
    </section>
-   <section class='container pub-list'>
+   <div class="container col-md-12">
+   <section class='pub-list col-md-6'>
      <ul class="list-group">
        <li class='list-box'ng-repeat="pub in searchCtrl.searchResult.businesses">
-         {{ pub.name }}
-         {{ pub.stars }}
-         {{ pub.pounds }}
+         <a ng-href="{{ pub.url }}">{{ pub.name }}</a>
+         <p>Rating: {{ pub.rating }}</p>
        </li>
      </ul>
    </section>
+   <section class="col-md-6 map">
+     <input class="controls" id="pac-input" placeholder="Search Box" type="text">/
+     <div id="map"></div>
+  </input>
+
+   </section>
+
+   </div>
+
+   <script type="text/javascript" defer="defer", src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
  </body>
 </html>
