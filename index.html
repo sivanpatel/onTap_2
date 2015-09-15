@@ -27,9 +27,9 @@
      <section class="welcome">
        <h1>Where's the beer?</h1>
        <form class="form-horizontal">
-         <input type="text" class="inputBox" placeholder="Enter your location" ng-model="searchCtrl.searchTerm">
+         <input type="text" class="inputBox" class="controls" id="pac-input" placeholder="Enter your location" ng-model="searchCtrl.searchTerm">
          </br>
-         <button class="btn searchButton" ng-click="searchCtrl.doSearch()" style="font-size: 20px;">Search</button>
+         <button class="btn searchButton" ng-click="searchCtrl.doSearch()"><p>Search</p></button>
        </form>
      </section>
      </div>
@@ -44,7 +44,7 @@
      </ul>
    </section>
    <section class="col-md-6 map">
-     <input class="controls" id="pac-input" placeholder="Search Box" type="text">/
+     <!-- <input class="controls" id="pac-input" placeholder="Search Box" type="text">/ -->
      <div id="map"></div>
   </input>
 
