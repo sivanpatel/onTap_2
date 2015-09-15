@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="OnTap">
+  <head>
+    <meta charset="utf-8">
+    <title>OnTap</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/oauth-signature/dist/oauth-signature.js"></script>
+    <script src="secrets.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/onTapController.js"></script>
+  </head>
+
+  <body ng-controller="OnTapController as searchCtrl">
+    <div>
+      <h1>Hello!</h1>
+      <form class="form-horizontal">
+        <input type="text" ng-model="searchCtrl.searchTerm">
+        <button class="btn" ng-click="searchCtrl.doSearch()">Search</button>
+      </form>
+      <ul class="list-group">
+        <li ng-repeat="pub in searchCtrl.searchResult.businesses">
+          {{ pub.name }}
+          {{ pub.stars }}
+          {{ pub.pounds }}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

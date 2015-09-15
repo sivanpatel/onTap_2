@@ -1,0 +1,1 @@
+var onTapModule = angular.module('OnTap', ['ngResource']);
