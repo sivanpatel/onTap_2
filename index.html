@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>OnTap</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -14,19 +15,31 @@
   </head>
 
   <body ng-controller="OnTapController as searchCtrl">
-    <div>
-      <h1>Hello!</h1>
-      <form class="form-horizontal">
-        <input type="text" ng-model="searchCtrl.searchTerm">
-        <button class="btn" ng-click="searchCtrl.doSearch()">Search</button>
-      </form>
-      <ul class="list-group">
-        <li ng-repeat="pub in searchCtrl.searchResult.businesses">
-          {{ pub.name }}
-          {{ pub.stars }}
-          {{ pub.pounds }}
-        </li>
-      </ul>
-    </div>
-  </body>
+ <section class="container col-md-12">
+ <div class="col-md-2">
+   <div class='logo' >
+     <p> OnTap </p>
+   </div>
+ </div>
+   <div class="col-md-6 col-md-offset-1">
+     <section class="welcome">
+       <h1>Where's the beer?</h1>
+       <form class="form-horizontal">
+         <input type="text" class="inputBox" placeholder="Enter your location" ng-model="searchCtrl.searchTerm">
+         </br>
+         <button class="btn searchButton" ng-click="searchCtrl.doSearch()" style="font-size: 40px;">Search</button>
+       </form>
+     </section>
+     </div>
+   </section>
+   <section class='container pub-list'>
+     <ul class="list-group">
+       <li class='list-box'ng-repeat="pub in searchCtrl.searchResult.businesses">
+         {{ pub.name }}
+         {{ pub.stars }}
+         {{ pub.pounds }}
+       </li>
+     </ul>
+   </section>
+ </body>
 </html>

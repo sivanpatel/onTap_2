@@ -1,0 +1,72 @@
+body {
+ background: url('http://www.gn-design.co.uk/bars/images/12.jpg') center center no-repeat;
+ background-size: 100%;
+ background-attachment: fixed;
+ -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.logo {
+ position: relative;
+ width: 360px;
+ height: 170px;
+ background: #000;
+ border: 8px solid #fff;
+ color: #fff;
+ float: left;
+ margin-left: 40px;
+ margin-top: 80px;
+}
+
+.logo p {
+ padding-left: 25px;
+ font-size: 7em;
+ text-decoration: none;
+}
+
+.welcome {
+ margin-top: 80px;
+ text-align: center;
+}
+
+.welcome h1 {
+ color: #fff;
+ font-size: 8em;
+}
+
+.inputBox {
+ height: 80px;
+ width: 60%;
+ background: transparent;
+ border: 8px solid #fff;
+ margin-top: 25px;
+ font-size: 1.3vw;
+ text-align: center;
+ color: #fff;
+ }
+
+ input::-webkit-input-placeholder {
+ color: #fff;
+}
+
+.searchButton {
+ margin-top: 50px;
+ width: 250px;
+ height: 70px;
+ font-size: 12px;
+ background-color: #fff;
+}
+
+.pub-list {
+ text-align: center;
+ font-size: 50px;
+ overflow: hidden;
+ padding-top: 50px;
+}
+
+.list-box {
+ background: rgba(255, 255, 255, 0.7);
+
+}
