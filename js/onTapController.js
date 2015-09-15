@@ -6,7 +6,7 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
 
    var timestamp = new Date().getTime();
    var method = 'GET';
-   var url = 'http://api.yelp.com/v2/search?';
+   var url = 'http://api.yelp.com/v2/search';
    var params =    {
      'callback': 'angular.callbacks._' + index,
      'oauth_consumer_key': consumer_key,
@@ -16,7 +16,10 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
      'oauth_nonce': nonce,
      'location': self.searchTerm,
      'cc': 'GB',
-     'category_filter': 'pubs'
+     'category_filter': 'pubs',
+    //  '#start': '0',
+    //  'sortby': 'rating',
+    //  'attrs': 'RestaurantsPriceRange2.1'
      }
    var consumerSecret = consumer_secret;
    var tokenSecret = token_secret;
