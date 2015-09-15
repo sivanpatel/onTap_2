@@ -27,8 +27,8 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
        console.log(data);
    }, function(response) { console.log(response) })
    index ++;
-   });
+   };
 
- };
+ }
 
-}]);
+]);
