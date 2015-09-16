@@ -42,13 +42,9 @@
          <p>Rating: {{ pub.rating }}</p>
          <div ng-init="searchCtrl.getCoords(pub.location.coordinate, pub.name)"></div>
        </li>
-       <!-- <li class='list-box'ng-repeat="coordinate in searchCtrl.searchResult.businesses.location">
-         {{ coordinate.latitude }} {{ coordinate.longitude }}
-       </li> -->
      </ul>
    </section>
    <section class="col-md-6 map">
-     <!-- <input class="controls" id="pac-input" placeholder="Search Box" type="text">/ -->
      <div id="map"></div>
   </input>
 

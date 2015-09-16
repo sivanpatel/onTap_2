@@ -58,8 +58,6 @@ function initAutocomplete() {
         bounds.extend(place.geometry.location);
       }
     });
-    // map.fitBounds(bounds);
-    // map = this.map.map;
 
 map.fitBounds(bounds);
 zoomChangeBoundsListener =

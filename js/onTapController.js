@@ -1,8 +1,6 @@
 onTapModule.controller('OnTapController', ['$resource', '$http', function($resource, $http) {
  var index = 0;
  var self = this;
- //var map = document.getElementById('map')
-
 
  self.doSearch = function() {
 
@@ -18,10 +16,7 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
      'oauth_nonce': nonce,
      'location': self.searchTerm,
      'cc': 'GB',
-     'category_filter': 'pubs',
-    //  '#start': '0',
-    //  'sortby': 'rating',
-    //  'attrs': 'RestaurantsPriceRange2.1'
+     'category_filter': 'pubs'
      }
    var consumerSecret = consumer_secret;
    var tokenSecret = token_secret;
@@ -29,7 +24,6 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
    params['oauth_signature'] = signature;
    $http.jsonp(url, { params: params }).then(function(data) {
        self.searchResult = data.data;
-      //  console.log(data);
        }, function(response) { console.log(response) })
    index ++;
    };
@@ -44,8 +38,5 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
      });
      marker.setMap(map);
    };
-
-
-
+   
  }]);
-// onTapModule.getCoords(coords)
