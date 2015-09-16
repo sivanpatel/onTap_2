@@ -1,5 +1,5 @@
 body {
- background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../public/images/background.jpg') center center no-repeat;
+ background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('../images/background.jpg') center center no-repeat;
  background-size: 100%;
  background-attachment: fixed;
  -webkit-background-size: cover;

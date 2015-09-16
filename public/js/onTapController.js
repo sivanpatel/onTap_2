@@ -29,7 +29,7 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
    };
 
    self.getCoords = function(coords, name) {
-     var image = "public/images/beer-icon.png"
+     var image = "images/beer-icon.png"
      var marker = new google.maps.Marker({
        position: new google.maps.LatLng(coords.latitude, coords.longitude),
        map: map,
@@ -38,5 +38,5 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
      });
      marker.setMap(map);
    };
-   
+
  }]);
