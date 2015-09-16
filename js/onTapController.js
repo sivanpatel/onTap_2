@@ -1,6 +1,8 @@
 onTapModule.controller('OnTapController', ['$resource', '$http', function($resource, $http) {
  var index = 0;
  var self = this;
+ //var map = document.getElementById('map')
+
 
  self.doSearch = function() {
 
@@ -27,11 +29,21 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
    params['oauth_signature'] = signature;
    $http.jsonp(url, { params: params }).then(function(data) {
        self.searchResult = data.data;
-       console.log(data);
-   }, function(response) { console.log(response) })
+      //  console.log(data);
+       }, function(response) { console.log(response) })
    index ++;
    };
 
- }
+   self.getCoords = function(coords, name) {
+     var marker = new google.maps.Marker({
+       position: new google.maps.LatLng(coords.latitude, coords.longitude),
+       map: map,
+       title: name
+     });
+     marker.setMap(map);
+   };
 
-]);
+
+
+ }]);
+// onTapModule.getCoords(coords)

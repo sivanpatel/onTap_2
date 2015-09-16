@@ -12,8 +12,8 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="secrets.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/map.js"></script>
     <script src="js/onTapController.js"></script>
+    <script src="js/map.js"></script>
   </head>
 
   <body ng-controller="OnTapController as searchCtrl">
@@ -40,7 +40,11 @@
        <li class='list-box'ng-repeat="pub in searchCtrl.searchResult.businesses">
          <a ng-href="{{ pub.url }}">{{ pub.name }}</a>
          <p>Rating: {{ pub.rating }}</p>
+         <div ng-init="searchCtrl.getCoords(pub.location.coordinate, pub.name)"></div>
        </li>
+       <!-- <li class='list-box'ng-repeat="coordinate in searchCtrl.searchResult.businesses.location">
+         {{ coordinate.latitude }} {{ coordinate.longitude }}
+       </li> -->
      </ul>
    </section>
    <section class="col-md-6 map">
