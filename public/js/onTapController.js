@@ -6,7 +6,7 @@ onTapModule.controller('OnTapController', ['$resource', '$http', function($resou
 
    var timestamp = new Date().getTime();
    var method = 'GET';
-   var url = 'http://api.yelp.com/v2/search';
+   var url = 'https://api.yelp.com/v2/search';
    var params =    {
      'callback': 'angular.callbacks._' + index,
      'oauth_consumer_key': consumer_key,
