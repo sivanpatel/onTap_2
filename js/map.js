@@ -3,7 +3,7 @@ function initAutocomplete() {
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 51.5072, lng: -0.1},
-    zoom: 8,
+    zoom: 10,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
 
@@ -58,7 +58,17 @@ function initAutocomplete() {
         bounds.extend(place.geometry.location);
       }
     });
-    map.fitBounds(bounds);
+    // map.fitBounds(bounds);
+    // map = this.map.map;
+
+map.fitBounds(bounds);
+zoomChangeBoundsListener =
+  google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+      if (this.getZoom()){
+          this.setZoom(16);
+      }
+});
+setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
   });
 
 
