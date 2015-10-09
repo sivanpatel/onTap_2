@@ -2,7 +2,7 @@
 <a href="http://on-tap.herokuapp.com">onTap</a>
 <br> Enter your location, and then enjoy!
 
-  ### Team
+### Team
   - [Emily Carson](https://github.com/emily-jane)
   - [Sivan Patel](https://github.com/sivanpatel)
   - [Richard Geoghegan](https://github.com/richgeog)
